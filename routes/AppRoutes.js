@@ -1,6 +1,6 @@
 import express from 'express';
 const routers = express.Router();
-import userRoutes from "./user_routes/user_router.js"
+// import userRoutes from "./user_routes/user_router.js"
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -36,7 +36,7 @@ export class AppRoute {
 
     static #userRouts() {
 
-        routers.use("/user", userRoutes);
+        // routers.use("/user", userRoutes);
     }
 
 }
