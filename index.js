@@ -5,9 +5,9 @@ import dotenv from "dotenv";
 dotenv.config();
 import cors from 'cors';
 import morgan from "morgan";
-import sequelize from "./db_config/db_config.js";
+// import sequelize from "./db_config/db_config.js";
 import {AppRoute} from "./routes/AppRoutes.js";
-import db_migrations from "./models/db_migraton.js"
+// import db_migrations from "./models/db_migraton.js"
 
 
 const corsOptions = {
@@ -46,7 +46,7 @@ const runDBSync = async  ()=>{
     try {
 
 
-        await sequelize.sync({alter: true,});
+       // await sequelize.sync({alter: true,});
     }
     catch (e) {
         console.log(e);
