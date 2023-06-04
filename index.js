@@ -1,5 +1,4 @@
 import express from "express";
-import color from "colors";
 import path from "path";
 const app = express();
 import dotenv from "dotenv";
@@ -8,17 +7,7 @@ import cors from 'cors';
 import morgan from "morgan";
 import sequelize from "./db_config/db_config.js";
 import {AppRoute} from "./routes/AppRoutes.js";
-import createFolder from "./file_handling/create_folder.js"
-import {sock} from "./sockets/socket.js";
-
-await createFolder("images");
-await createFolder("pdf_documents");
-await createFolder("svg_xml");
-await createFolder("videos");
-await createFolder("zip_files");
-await createFolder("public");
 import db_migrations from "./models/db_migraton.js"
-import {runCronJob} from "./cron_job/cron_job.js";
 
 
 const corsOptions = {

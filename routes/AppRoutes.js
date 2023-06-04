@@ -24,16 +24,13 @@ export class AppRoute {
 
         routers.get('/',
             (req, res) => {
-                sendNotification({
-                    screen:"HOME_SCREEN"
-                });
+
                 res.send({
                     status: "Hello! Server is up."
                 });
             },
         );
 
-        routers.use("/secure", routerPayment)
 
     }
 
