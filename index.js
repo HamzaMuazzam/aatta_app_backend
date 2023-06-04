@@ -37,8 +37,8 @@ let server = await app.listen(process.env.PORT || 8000, async () => {
     console.log(`SERVER IS RUNNING ON http://localhost:${process.env.PORT}`);
     // await runDBSync();
 });
-app.use(new AppRoute().initAppRouts());
-
+// app.use(new AppRoute().initAppRouts());
+//
 
 
 
