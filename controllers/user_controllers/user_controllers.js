@@ -82,8 +82,12 @@ const getAllUsers = async (req, res) => {
 
     try {
 
-        let user = await User.findAll();
-        send.response(res, "Success", 200, true,user);
+        let user = await User.findAll({
+            where:{
+                userType:req.body.userType
+            }
+        });
+        send.response(res, "Success", 200, false,user);
 
     } catch (e) {
 
@@ -96,12 +100,7 @@ const getAllUsers = async (req, res) => {
 const getUserById = async (req, res) => {
     try {
         let model = await User.findByPk(req.body.userId);
-        res.send({
-            error: model == null,
-            message: model == null ? "No User Found" : "User Found",
-            data: model
-        });
-
+        send.response(res, "Success", 200, false,model);
     }
     catch (e) {
         send.response(res, e.message, 403, true)
