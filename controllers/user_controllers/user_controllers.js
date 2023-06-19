@@ -26,7 +26,7 @@ const createAccount = async (req, res) => {
 
 
         if (result != null) {
-            send.response(res, "User Created", 200, true)
+            send.response(res, "User Created", 200, false)
         }
         else {
             send.response(res, "error occurred", 400, true)

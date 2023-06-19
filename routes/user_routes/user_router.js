@@ -6,7 +6,7 @@ import globalJWTMiddleWare from "../../middlewares/global_middleware.js";
 
 const routers = express.Router();
 
-routers.all('/createAccount', files().single("profileImage"), user_middleware.createAccount, user_controllers.createAccount);
+routers.all('/createAccount',  user_middleware.createAccount, user_controllers.createAccount);
 routers.all('/loginUser', files().any(), user_controllers.loginUser);
 
 routers.all('/getUserById', files().any(), globalJWTMiddleWare,
@@ -17,6 +17,7 @@ routers.all('/getAllUsers',
     files().any(),
     globalJWTMiddleWare,
     user_controllers.getAllUsers);
+
 
 export default routers;
 
