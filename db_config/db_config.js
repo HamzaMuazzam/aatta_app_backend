@@ -4,13 +4,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 
-const sequelize = new sql.Sequelize(
-    `${process.env.DATABASE_NAME}`,
-    `${process.env.USER_NAME}`,
-    // `${process.env.PASSWORD}`,
-    {
-        host: `${process.env.HOST}`,
-        dialect: `${process.env.DIALECT}`,
+const sequelize = new sql.Sequelize({
+        database:`${process.env.DATABASE_NAME}`,
+    username:`${process.env.USER_NAME}`,
+    dialect: `${process.env.DIALECT}`,
+    host: `${process.env.HOST}`,
+    options:{
         define: {
             engine: 'InnoDB',
             // charset: 'utf8',
@@ -19,7 +18,8 @@ const sequelize = new sql.Sequelize(
         },
 
         // logging: false
-    });
+    }
+});
 
 
 try {
