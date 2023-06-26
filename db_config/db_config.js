@@ -7,7 +7,7 @@ dotenv.config();
 const sequelize = new sql.Sequelize(
     `${process.env.DATABASE_NAME}`,
     `${process.env.USER_NAME}`,
-    `${process.env.PASSWORD}`,
+    // `${process.env.PASSWORD}`,
     {
         host: `${process.env.HOST}`,
         dialect: `${process.env.DIALECT}`,
