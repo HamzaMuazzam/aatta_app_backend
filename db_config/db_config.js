@@ -9,6 +9,7 @@ const sequelize = new sql.Sequelize({
     username:`${process.env.USER_NAME}`,
     dialect: `${process.env.DIALECT}`,
     host: `${process.env.HOST}`,
+    password: `${process.env.PASSWORD}`,
     options:{
         define: {
             engine: 'InnoDB',
