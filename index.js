@@ -28,7 +28,7 @@ const runDBSync = async  ()=>{
     try {
 
 
-       await sequelize.sync({alter: true});
+       // await sequelize.sync({alter: true});
 
     }
     catch (e) {

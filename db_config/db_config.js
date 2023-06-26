@@ -19,7 +19,6 @@ const sequelize = new sql.Sequelize(
         },
 
         // logging: false
-
     });
 
 
@@ -28,7 +27,7 @@ try {
 
     console.log('DB Connection has been established successfully.');
 } catch (error) {
-    console.error('Unable to connect to the database:', `${error.message}`.bgRed);
+    console.error('Unable to connect to the database:', `${error}`.bgRed);
 }
 
 
