@@ -84,8 +84,10 @@ const createAdminUser = async (req, res) => {
             send.response(res, "User Already Exist", 403, true);
         } else {
             let user = await User.create({
-                loginId: req.body.loginId, thumbId: req.body.thumbId, password: req.body.password
-            });
+                loginId: req.body.loginId,
+                thumbId: req.body.thumbId,
+                password: req.body.password,
+                isAdmin: true});
             res.send({
                 error: false, message: "user Found", token: await token.createToken(user), data: user
             })
