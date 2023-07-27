@@ -17,7 +17,6 @@ const sequelize = new sql.Sequelize({
             // collate: 'utf8_general_ci',
             // timestamps: true
         },
-
         // logging: false
     }
 });
