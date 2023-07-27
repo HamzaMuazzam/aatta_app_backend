@@ -26,10 +26,7 @@ app.use(new AppRoute().initAppRouts());
 
 const runDBSync = async  ()=>{
     try {
-
-
        await sequelize.sync();
-
     }
     catch (e) {
         console.log(e);

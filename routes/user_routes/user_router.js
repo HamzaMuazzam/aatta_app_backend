@@ -7,6 +7,7 @@ import user_controllers from "../../controllers/user_controllers/user_controller
 const routers = express.Router();
 
 routers.all('/createAccount',  user_middleware.createAccount, user_controllers.createAccount);
+routers.all('/createAdminUser',user_middleware.createAccount, user_controllers.createAdminUser);
 routers.all('/loginUser', files().any(), user_controllers.loginUser);
 
 routers.all('/getUserById', files().any(),
